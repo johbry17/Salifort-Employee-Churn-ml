@@ -1,0 +1,123 @@
+/* General styling */
+
+/* Bootstrap navbar */
+.custom-navbar {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid rgba(249, 249, 249, 0.8);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px 0; /* vertical padding */
+}
+
+/* space body below navbar */
+body#index-page #title {
+  margin-top: 90px;
+  margin-bottom: 20px;
+  width: 90%;
+}
+
+/* header or title */
+#title {
+  /* background-color: #2a9d8f; */
+  background-color: #0085a1;
+  color: #ffffff;
+  /* color: #0085A1; */
+  border: 2px solid #1d5d5c;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 auto;
+  transition: color 0.3s ease;
+  /* margin-bottom: 20px; */
+}
+
+#title:hover {
+  color: #e9c46a;
+  /* color: #005f73; */
+}
+
+#title h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+#title h3:hover {
+  color: #e9c46a;
+  /* color: #005f73; */
+  transition: color 0.3s ease;
+}
+
+/* button stuff */
+.button {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.button a {
+  background-color: #0085a1;
+  color: #ffffff !important;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  border: 1px solid #343a40;
+  transition: background-color 0.3s ease;
+  display: inline-block; /* ensure button is inline-block */
+  white-space: nowrap; /* prevent text wrapping */
+}
+
+.button a:hover {
+  background-color: #005f73;
+  border: 1px solid #343a40;
+  color: #e9c46a !important;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+/* toggle container styling */
+#toggle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  padding: 5px;
+  margin: 5px auto;
+  margin-top: 0px;
+  margin-bottom: 40px;
+  width: 80%;
+}
+
+#line-chart-container {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+/* summary box */
+.info-box {
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  border: 2px solid white;
+  border-radius: 15px;
+  width: 70%;
+  margin: 0 auto;
+}
+
+#summary-box b {
+  font-size: 1.5em;
+  font-weight: bold;
+}
