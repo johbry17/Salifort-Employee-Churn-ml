@@ -69,6 +69,44 @@ table,
   text-align: center !important;
 }
 
+// scrollable tables
+.scroll-table {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; // for smooth scrolling on iOS
+}
+
+.dataframe {
+  width: 100%;
+  min-width: 600px; // adjust as needed for your smallest table
+  border-collapse: collapse;
+  table-layout: auto; // let browser size columns naturally
+}
+
+.dataframe th,
+.dataframe td {
+  white-space: normal; // allow wrapping
+  text-align: center;
+  max-width: 180px; // adjust as needed
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// vertical scroll for tbody
+.dataframe tbody {
+  display: block;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.dataframe thead,
+.dataframe tbody tr {
+  display: table;
+  width: 100%;
+//   table-layout: auto;
+table-layout: fixed;
+}
+
 // Center images
 .output_png,
 .output_svg,

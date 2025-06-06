@@ -53,6 +53,41 @@ table,
   text-align: center !important;
 }
 
+.scroll-table {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.dataframe {
+  width: 100%;
+  min-width: 600px;
+  border-collapse: collapse;
+  table-layout: auto;
+}
+
+.dataframe th,
+.dataframe td {
+  white-space: normal;
+  text-align: center;
+  max-width: 180px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dataframe tbody {
+  display: block;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.dataframe thead,
+.dataframe tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
 .output_png,
 .output_svg,
 .output_jpeg,
