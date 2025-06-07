@@ -14604,7 +14604,23 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
             </ul>
         </div>
     </div>
-</nav>
+</nav><p><!-- set minimum width for wider dataframes --></p>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // Adjust this threshold as needed
+  const wideThreshold = 6;
+  document.querySelectorAll("table.dataframe").forEach(function(tbl) {
+    // Count columns in the first row of thead or tbody
+    const colCount =
+      tbl.querySelector("thead tr")?.children.length ||
+      tbl.querySelector("tbody tr")?.children.length ||
+      0;
+    if (colCount >= wideThreshold) {
+      tbl.classList.add("wide");
+    }
+  });
+});
+</script>
 </div>
 </div>
 </div>
@@ -14932,10 +14948,25 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
 <div class="jp-OutputArea-child">
 
 
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<table class="dataframe table table-striped table-hover scroll-table">
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
+      <th></th>
       <th>Model</th>
       <th>Recall</th>
       <th>F2 Score</th>
@@ -14950,6 +14981,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
   </thead>
   <tbody>
     <tr>
+      <th>0</th>
       <td>Logistic Regression (Core + Interactions)</td>
       <td>0.962126</td>
       <td>0.817433</td>
@@ -14962,7 +14994,8 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>2.682911</td>
     </tr>
     <tr>
-      <td>Logistic Regression with Interaction (feature selection)</td>
+      <th>1</th>
+      <td>Logistic Regression with Interaction (feature ...</td>
       <td>0.960133</td>
       <td>0.819161</td>
       <td>0.671312</td>
@@ -14974,7 +15007,8 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>5.272891</td>
     </tr>
     <tr>
-      <td>Logistic Regression (Core + Interactions + Burnout)</td>
+      <th>2</th>
+      <td>Logistic Regression (Core + Interactions + Bur...</td>
       <td>0.951495</td>
       <td>0.825836</td>
       <td>0.689290</td>
@@ -14986,7 +15020,8 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>1.225297</td>
     </tr>
     <tr>
-      <td>Logistic Regression (Core + Interactions + Burnout)</td>
+      <th>3</th>
+      <td>Logistic Regression (Core + Interactions + Bur...</td>
       <td>0.951495</td>
       <td>0.825836</td>
       <td>0.689290</td>
@@ -14998,6 +15033,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>1.622090</td>
     </tr>
     <tr>
+      <th>4</th>
       <td>Logistic Regression (base)</td>
       <td>0.947508</td>
       <td>0.796203</td>
@@ -15010,6 +15046,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>9.355571</td>
     </tr>
     <tr>
+      <th>5</th>
       <td>Decision Tree (Core + Burnout)</td>
       <td>0.943503</td>
       <td>0.887040</td>
@@ -15022,6 +15059,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>6.024922</td>
     </tr>
     <tr>
+      <th>6</th>
       <td>Decision Tree (base)</td>
       <td>0.942247</td>
       <td>0.881179</td>
@@ -15034,6 +15072,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>4.367313</td>
     </tr>
     <tr>
+      <th>7</th>
       <td>Random Forest (Core + Burnout)</td>
       <td>0.940992</td>
       <td>0.896317</td>
@@ -15046,6 +15085,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>105.602775</td>
     </tr>
     <tr>
+      <th>8</th>
       <td>Random Forest (base)</td>
       <td>0.940364</td>
       <td>0.863799</td>
@@ -15058,7 +15098,8 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>227.056769</td>
     </tr>
     <tr>
-      <td>Logistic Regression with Binning (feature selection)</td>
+      <th>9</th>
+      <td>Logistic Regression with Binning (feature sele...</td>
       <td>0.939535</td>
       <td>0.855104</td>
       <td>0.753531</td>
@@ -15070,6 +15111,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>4.195195</td>
     </tr>
     <tr>
+      <th>10</th>
       <td>Logistic Regression with Binning</td>
       <td>0.937542</td>
       <td>0.854944</td>
@@ -15082,6 +15124,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>6.474794</td>
     </tr>
     <tr>
+      <th>11</th>
       <td>Logistic Regression (Minimal Binned)</td>
       <td>0.937542</td>
       <td>0.854944</td>
@@ -15094,6 +15137,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>8.552954</td>
     </tr>
     <tr>
+      <th>12</th>
       <td>XGBoost (Core + Burnout)</td>
       <td>0.936598</td>
       <td>0.923953</td>
@@ -15106,6 +15150,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>24.659316</td>
     </tr>
     <tr>
+      <th>13</th>
       <td>XGBoost with Binning</td>
       <td>0.936598</td>
       <td>0.924182</td>
@@ -15118,6 +15163,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>30.171742</td>
     </tr>
     <tr>
+      <th>14</th>
       <td>XGBoost (base)</td>
       <td>0.936598</td>
       <td>0.926018</td>
@@ -15130,6 +15176,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>22.866176</td>
     </tr>
     <tr>
+      <th>15</th>
       <td>XGBoost with Binning (feature selection)</td>
       <td>0.935970</td>
       <td>0.926087</td>
@@ -15142,6 +15189,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>25.339970</td>
     </tr>
     <tr>
+      <th>16</th>
       <td>Decision Tree with Binning (feature selection)</td>
       <td>0.935342</td>
       <td>0.920776</td>
@@ -15154,6 +15202,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>6.731128</td>
     </tr>
     <tr>
+      <th>17</th>
       <td>XGBoost with Flags (feature selection)</td>
       <td>0.935342</td>
       <td>0.926847</td>
@@ -15166,6 +15215,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>20.719740</td>
     </tr>
     <tr>
+      <th>18</th>
       <td>Logistic Regression (Core + Burnout)</td>
       <td>0.934884</td>
       <td>0.798796</td>
@@ -15178,6 +15228,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>1.845120</td>
     </tr>
     <tr>
+      <th>19</th>
       <td>XGBoost with Flags</td>
       <td>0.934714</td>
       <td>0.925420</td>
@@ -15190,6 +15241,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>24.141583</td>
     </tr>
     <tr>
+      <th>20</th>
       <td>Decision Tree with Binning</td>
       <td>0.934087</td>
       <td>0.918632</td>
@@ -15202,6 +15254,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>10.279847</td>
     </tr>
     <tr>
+      <th>21</th>
       <td>XGBoost with Interaction</td>
       <td>0.934087</td>
       <td>0.927565</td>
@@ -15214,6 +15267,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>28.398952</td>
     </tr>
     <tr>
+      <th>22</th>
       <td>Logistic Regression (Minimal Interaction)</td>
       <td>0.933555</td>
       <td>0.808121</td>
@@ -15226,6 +15280,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>5.683149</td>
     </tr>
     <tr>
+      <th>23</th>
       <td>Logistic Regression with Interaction</td>
       <td>0.933555</td>
       <td>0.808121</td>
@@ -15238,6 +15293,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>11.533334</td>
     </tr>
     <tr>
+      <th>24</th>
       <td>Decision Tree with Interaction</td>
       <td>0.933459</td>
       <td>0.907150</td>
@@ -15250,7 +15306,8 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>7.971059</td>
     </tr>
     <tr>
-      <td>Decision Tree with Interaction (feature selection)</td>
+      <th>25</th>
+      <td>Decision Tree with Interaction (feature select...</td>
       <td>0.932831</td>
       <td>0.902795</td>
       <td>0.861200</td>
@@ -15262,6 +15319,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>7.435885</td>
     </tr>
     <tr>
+      <th>26</th>
       <td>XGBoost (Core + Interactions + Burnout)</td>
       <td>0.932203</td>
       <td>0.917346</td>
@@ -15274,6 +15332,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>20.212044</td>
     </tr>
     <tr>
+      <th>27</th>
       <td>XGBoost with Interaction (feature selection)</td>
       <td>0.931576</td>
       <td>0.925880</td>
@@ -15286,6 +15345,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>24.986766</td>
     </tr>
     <tr>
+      <th>28</th>
       <td>Decision Tree (Core + Interactions)</td>
       <td>0.931576</td>
       <td>0.909202</td>
@@ -15298,6 +15358,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>5.384349</td>
     </tr>
     <tr>
+      <th>29</th>
       <td>Decision Tree with Flags</td>
       <td>0.930948</td>
       <td>0.909035</td>
@@ -15310,6 +15371,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>5.273044</td>
     </tr>
     <tr>
+      <th>30</th>
       <td>XGBoost (Core + Interactions)</td>
       <td>0.930948</td>
       <td>0.919747</td>
@@ -15322,7 +15384,8 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>23.833054</td>
     </tr>
     <tr>
-      <td>Random Forest with Interaction (feature selection)</td>
+      <th>31</th>
+      <td>Random Forest with Interaction (feature select...</td>
       <td>0.930320</td>
       <td>0.904210</td>
       <td>0.867681</td>
@@ -15334,6 +15397,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>273.211774</td>
     </tr>
     <tr>
+      <th>32</th>
       <td>Decision Tree (Core + Interactions + Burnout)</td>
       <td>0.930320</td>
       <td>0.897420</td>
@@ -15346,6 +15410,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>4.867640</td>
     </tr>
     <tr>
+      <th>33</th>
       <td>Random Forest (Core + Interactions + Burnout)</td>
       <td>0.929692</td>
       <td>0.900852</td>
@@ -15358,6 +15423,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>111.234149</td>
     </tr>
     <tr>
+      <th>34</th>
       <td>Decision Tree with Flags (feature selection)</td>
       <td>0.929692</td>
       <td>0.909705</td>
@@ -15370,6 +15436,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>4.651994</td>
     </tr>
     <tr>
+      <th>35</th>
       <td>Random Forest with Interaction</td>
       <td>0.929692</td>
       <td>0.903710</td>
@@ -15382,6 +15449,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>192.764459</td>
     </tr>
     <tr>
+      <th>36</th>
       <td>Random Forest with Flags (feature selection)</td>
       <td>0.929065</td>
       <td>0.873878</td>
@@ -15394,6 +15462,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>102.586266</td>
     </tr>
     <tr>
+      <th>37</th>
       <td>Random Forest with Flags</td>
       <td>0.929065</td>
       <td>0.873878</td>
@@ -15406,6 +15475,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>100.909295</td>
     </tr>
     <tr>
+      <th>38</th>
       <td>Random Forest with Binning (feature selection)</td>
       <td>0.928437</td>
       <td>0.923682</td>
@@ -15418,6 +15488,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>95.310436</td>
     </tr>
     <tr>
+      <th>39</th>
       <td>Random Forest with Binning</td>
       <td>0.927809</td>
       <td>0.923173</td>
@@ -15430,6 +15501,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>115.631618</td>
     </tr>
     <tr>
+      <th>40</th>
       <td>Random Forest (Core + Interactions)</td>
       <td>0.927809</td>
       <td>0.861707</td>
@@ -15442,7 +15514,8 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>134.816109</td>
     </tr>
     <tr>
-      <td>Logistic Regression with Flags (feature selection)</td>
+      <th>41</th>
+      <td>Logistic Regression with Flags (feature select...</td>
       <td>0.917608</td>
       <td>0.870524</td>
       <td>0.808311</td>
@@ -15454,6 +15527,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>1.185176</td>
     </tr>
     <tr>
+      <th>42</th>
       <td>Logistic Regression with Flags</td>
       <td>0.917608</td>
       <td>0.868335</td>
@@ -15466,6 +15540,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>3.157325</td>
     </tr>
     <tr>
+      <th>43</th>
       <td>Logistic Regression (Core + Burnout)</td>
       <td>0.255814</td>
       <td>0.281845</td>
@@ -15478,6 +15553,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>0.483699</td>
     </tr>
     <tr>
+      <th>44</th>
       <td>Logistic Regression (Minimal Core + Interactions)</td>
       <td>0.255814</td>
       <td>0.281845</td>
@@ -15491,6 +15567,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
     </tr>
   </tbody>
 </table>
+</div>
 </div>
 
 </div>
@@ -15626,6 +15703,17 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Due to severe multicollinearity (VIFs &gt; 10, sometimes &gt; 30), most of these models are not suitable for interpretation or inference. I therefore focus on models with lower VIFs (e.g., the base and minimal binned models).</p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>All Logistic Regression Models:</p>
 
 </div>
@@ -15711,6 +15799,18 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
     </tr>
     <tr>
       <th>3</th>
+      <td>Logistic Regression (Core + Interactions + Bur...</td>
+      <td>0.951495</td>
+      <td>0.825836</td>
+      <td>0.689290</td>
+      <td>0.540377</td>
+      <td>0.855480</td>
+      <td>0.903177</td>
+      <td>6</td>
+      <td>[[6210, 1218], [73, 1432]]</td>
+    </tr>
+    <tr>
+      <th>4</th>
       <td>Logistic Regression (base)</td>
       <td>0.947508</td>
       <td>0.796203</td>
@@ -15722,7 +15822,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>[[5919, 1509], [79, 1426]]</td>
     </tr>
     <tr>
-      <th>8</th>
+      <th>9</th>
       <td>Logistic Regression with Binning (feature sele...</td>
       <td>0.939535</td>
       <td>0.855104</td>
@@ -15734,7 +15834,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>[[6594, 834], [91, 1414]]</td>
     </tr>
     <tr>
-      <th>9</th>
+      <th>10</th>
       <td>Logistic Regression with Binning</td>
       <td>0.937542</td>
       <td>0.854944</td>
@@ -15746,7 +15846,19 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>[[6607, 821], [94, 1411]]</td>
     </tr>
     <tr>
-      <th>16</th>
+      <th>11</th>
+      <td>Logistic Regression (Minimal Binned)</td>
+      <td>0.937542</td>
+      <td>0.854944</td>
+      <td>0.755151</td>
+      <td>0.632168</td>
+      <td>0.897571</td>
+      <td>0.952159</td>
+      <td>26</td>
+      <td>[[6607, 821], [94, 1411]]</td>
+    </tr>
+    <tr>
+      <th>18</th>
       <td>Logistic Regression (Core + Burnout)</td>
       <td>0.934884</td>
       <td>0.798796</td>
@@ -15758,7 +15870,19 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>[[6048, 1380], [98, 1407]]</td>
     </tr>
     <tr>
-      <th>20</th>
+      <th>22</th>
+      <td>Logistic Regression (Minimal Interaction)</td>
+      <td>0.933555</td>
+      <td>0.808121</td>
+      <td>0.672571</td>
+      <td>0.525627</td>
+      <td>0.846860</td>
+      <td>0.901327</td>
+      <td>22</td>
+      <td>[[6160, 1268], [100, 1405]]</td>
+    </tr>
+    <tr>
+      <th>23</th>
       <td>Logistic Regression with Interaction</td>
       <td>0.933555</td>
       <td>0.808121</td>
@@ -15770,7 +15894,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>[[6160, 1268], [100, 1405]]</td>
     </tr>
     <tr>
-      <th>38</th>
+      <th>41</th>
       <td>Logistic Regression with Flags (feature select...</td>
       <td>0.917608</td>
       <td>0.870524</td>
@@ -15782,7 +15906,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>[[6897, 531], [124, 1381]]</td>
     </tr>
     <tr>
-      <th>39</th>
+      <th>42</th>
       <td>Logistic Regression with Flags</td>
       <td>0.917608</td>
       <td>0.868335</td>
@@ -15792,6 +15916,30 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>0.957952</td>
       <td>21</td>
       <td>[[6877, 551], [124, 1381]]</td>
+    </tr>
+    <tr>
+      <th>43</th>
+      <td>Logistic Regression (Core + Burnout)</td>
+      <td>0.255814</td>
+      <td>0.281845</td>
+      <td>0.332613</td>
+      <td>0.475309</td>
+      <td>0.827046</td>
+      <td>0.890083</td>
+      <td>18</td>
+      <td>[[7003, 425], [1120, 385]]</td>
+    </tr>
+    <tr>
+      <th>44</th>
+      <td>Logistic Regression (Minimal Core + Interactions)</td>
+      <td>0.255814</td>
+      <td>0.281845</td>
+      <td>0.332613</td>
+      <td>0.475309</td>
+      <td>0.827046</td>
+      <td>0.890083</td>
+      <td>18</td>
+      <td>[[7003, 425], [1120, 385]]</td>
     </tr>
   </tbody>
 </table>
@@ -15895,6 +16043,18 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
     </tr>
     <tr>
       <th>3</th>
+      <td>Logistic Regression (Core + Interactions + Bur...</td>
+      <td>0.951495</td>
+      <td>0.825836</td>
+      <td>0.689290</td>
+      <td>0.540377</td>
+      <td>0.855480</td>
+      <td>0.903177</td>
+      <td>6</td>
+      <td>[[6210, 1218], [73, 1432]]</td>
+    </tr>
+    <tr>
+      <th>4</th>
       <td>Logistic Regression (base)</td>
       <td>0.947508</td>
       <td>0.796203</td>
@@ -15906,7 +16066,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>[[5919, 1509], [79, 1426]]</td>
     </tr>
     <tr>
-      <th>8</th>
+      <th>9</th>
       <td>Logistic Regression with Binning (feature sele...</td>
       <td>0.939535</td>
       <td>0.855104</td>
@@ -15918,8 +16078,20 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>[[6594, 834], [91, 1414]]</td>
     </tr>
     <tr>
-      <th>9</th>
+      <th>10</th>
       <td>Logistic Regression with Binning</td>
+      <td>0.937542</td>
+      <td>0.854944</td>
+      <td>0.755151</td>
+      <td>0.632168</td>
+      <td>0.897571</td>
+      <td>0.952159</td>
+      <td>26</td>
+      <td>[[6607, 821], [94, 1411]]</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>Logistic Regression (Minimal Binned)</td>
       <td>0.937542</td>
       <td>0.854944</td>
       <td>0.755151</td>
@@ -15994,7 +16166,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
   </thead>
   <tbody>
     <tr>
-      <th>8</th>
+      <th>9</th>
       <td>Logistic Regression with Binning (feature sele...</td>
       <td>0.939535</td>
       <td>0.855104</td>
@@ -16006,8 +16178,20 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>[[6594, 834], [91, 1414]]</td>
     </tr>
     <tr>
-      <th>9</th>
+      <th>10</th>
       <td>Logistic Regression with Binning</td>
+      <td>0.937542</td>
+      <td>0.854944</td>
+      <td>0.755151</td>
+      <td>0.632168</td>
+      <td>0.897571</td>
+      <td>0.952159</td>
+      <td>26</td>
+      <td>[[6607, 821], [94, 1411]]</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>Logistic Regression (Minimal Binned)</td>
       <td>0.937542</td>
       <td>0.854944</td>
       <td>0.755151</td>
@@ -16082,7 +16266,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
   </thead>
   <tbody>
     <tr>
-      <th>8</th>
+      <th>9</th>
       <td>Logistic Regression with Binning (feature sele...</td>
       <td>0.939535</td>
       <td>0.855104</td>
@@ -16308,7 +16492,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
   </thead>
   <tbody>
     <tr>
-      <th>4</th>
+      <th>5</th>
       <td>Decision Tree (Core + Burnout)</td>
       <td>0.943503</td>
       <td>0.887040</td>
@@ -16320,7 +16504,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>[[7402, 597], [90, 1503]]</td>
     </tr>
     <tr>
-      <th>5</th>
+      <th>6</th>
       <td>Decision Tree (base)</td>
       <td>0.942247</td>
       <td>0.881179</td>
@@ -16332,7 +16516,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>[[7355, 644], [92, 1501]]</td>
     </tr>
     <tr>
-      <th>15</th>
+      <th>16</th>
       <td>Decision Tree with Binning (feature selection)</td>
       <td>0.935342</td>
       <td>0.920776</td>
@@ -16344,7 +16528,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>[[7770, 229], [103, 1490]]</td>
     </tr>
     <tr>
-      <th>18</th>
+      <th>20</th>
       <td>Decision Tree with Binning</td>
       <td>0.934087</td>
       <td>0.918632</td>
@@ -16356,7 +16540,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>[[7760, 239], [105, 1488]]</td>
     </tr>
     <tr>
-      <th>21</th>
+      <th>24</th>
       <td>Decision Tree with Interaction</td>
       <td>0.933459</td>
       <td>0.907150</td>
@@ -16368,7 +16552,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>[[7662, 337], [106, 1487]]</td>
     </tr>
     <tr>
-      <th>22</th>
+      <th>25</th>
       <td>Decision Tree with Interaction (feature select...</td>
       <td>0.932831</td>
       <td>0.902795</td>
@@ -16380,7 +16564,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>[[7627, 372], [107, 1486]]</td>
     </tr>
     <tr>
-      <th>25</th>
+      <th>28</th>
       <td>Decision Tree (Core + Interactions)</td>
       <td>0.931576</td>
       <td>0.909202</td>
@@ -16392,7 +16576,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>[[7694, 305], [109, 1484]]</td>
     </tr>
     <tr>
-      <th>27</th>
+      <th>29</th>
       <td>Decision Tree with Flags</td>
       <td>0.930948</td>
       <td>0.909035</td>
@@ -16404,7 +16588,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>[[7697, 302], [110, 1483]]</td>
     </tr>
     <tr>
-      <th>29</th>
+      <th>32</th>
       <td>Decision Tree (Core + Interactions + Burnout)</td>
       <td>0.930320</td>
       <td>0.897420</td>
@@ -16416,7 +16600,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>[[7596, 403], [111, 1482]]</td>
     </tr>
     <tr>
-      <th>31</th>
+      <th>34</th>
       <td>Decision Tree with Flags (feature selection)</td>
       <td>0.929692</td>
       <td>0.909705</td>
@@ -16492,7 +16676,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
   </thead>
   <tbody>
     <tr>
-      <th>4</th>
+      <th>5</th>
       <td>Decision Tree (Core + Burnout)</td>
       <td>0.943503</td>
       <td>0.887040</td>
@@ -16504,7 +16688,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>[[7402, 597], [90, 1503]]</td>
     </tr>
     <tr>
-      <th>5</th>
+      <th>6</th>
       <td>Decision Tree (base)</td>
       <td>0.942247</td>
       <td>0.881179</td>
@@ -16516,7 +16700,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>[[7355, 644], [92, 1501]]</td>
     </tr>
     <tr>
-      <th>15</th>
+      <th>16</th>
       <td>Decision Tree with Binning (feature selection)</td>
       <td>0.935342</td>
       <td>0.920776</td>
@@ -16592,7 +16776,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
   </thead>
   <tbody>
     <tr>
-      <th>4</th>
+      <th>5</th>
       <td>Decision Tree (Core + Burnout)</td>
       <td>0.943503</td>
       <td>0.887040</td>
@@ -16604,7 +16788,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>[[7402, 597], [90, 1503]]</td>
     </tr>
     <tr>
-      <th>5</th>
+      <th>6</th>
       <td>Decision Tree (base)</td>
       <td>0.942247</td>
       <td>0.881179</td>
@@ -16616,7 +16800,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>[[7355, 644], [92, 1501]]</td>
     </tr>
     <tr>
-      <th>15</th>
+      <th>16</th>
       <td>Decision Tree with Binning (feature selection)</td>
       <td>0.935342</td>
       <td>0.920776</td>
@@ -16692,7 +16876,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
   </thead>
   <tbody>
     <tr>
-      <th>4</th>
+      <th>5</th>
       <td>Decision Tree (Core + Burnout)</td>
       <td>0.943503</td>
       <td>0.88704</td>
@@ -16783,7 +16967,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>{'model__class_weight': 'balanced', 'model__ma...</td>
       <td>0.943495</td>
       <td>[[7402, 597], [90, 1503]]</td>
-      <td>3.845752</td>
+      <td>2.94294</td>
     </tr>
   </tbody>
 </table>
@@ -16955,7 +17139,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
   </thead>
   <tbody>
     <tr>
-      <th>6</th>
+      <th>7</th>
       <td>Random Forest (Core + Burnout)</td>
       <td>0.940992</td>
       <td>0.896317</td>
@@ -16967,7 +17151,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>[[7508, 491], [94, 1499]]</td>
     </tr>
     <tr>
-      <th>7</th>
+      <th>8</th>
       <td>Random Forest (base)</td>
       <td>0.940364</td>
       <td>0.863799</td>
@@ -16979,7 +17163,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>[[7198, 801], [95, 1498]]</td>
     </tr>
     <tr>
-      <th>28</th>
+      <th>31</th>
       <td>Random Forest with Interaction (feature select...</td>
       <td>0.930320</td>
       <td>0.904210</td>
@@ -16991,19 +17175,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>[[7658, 341], [111, 1482]]</td>
     </tr>
     <tr>
-      <th>30</th>
-      <td>Random Forest with Interaction</td>
-      <td>0.929692</td>
-      <td>0.903710</td>
-      <td>0.867350</td>
-      <td>0.812843</td>
-      <td>0.952773</td>
-      <td>0.975924</td>
-      <td>22</td>
-      <td>[[7658, 341], [112, 1481]]</td>
-    </tr>
-    <tr>
-      <th>32</th>
+      <th>33</th>
       <td>Random Forest (Core + Interactions + Burnout)</td>
       <td>0.929692</td>
       <td>0.900852</td>
@@ -17015,7 +17187,19 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>[[7632, 367], [112, 1481]]</td>
     </tr>
     <tr>
-      <th>33</th>
+      <th>35</th>
+      <td>Random Forest with Interaction</td>
+      <td>0.929692</td>
+      <td>0.903710</td>
+      <td>0.867350</td>
+      <td>0.812843</td>
+      <td>0.952773</td>
+      <td>0.975924</td>
+      <td>22</td>
+      <td>[[7658, 341], [112, 1481]]</td>
+    </tr>
+    <tr>
+      <th>36</th>
       <td>Random Forest with Flags (feature selection)</td>
       <td>0.929065</td>
       <td>0.873878</td>
@@ -17027,7 +17211,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>[[7383, 616], [113, 1480]]</td>
     </tr>
     <tr>
-      <th>34</th>
+      <th>37</th>
       <td>Random Forest with Flags</td>
       <td>0.929065</td>
       <td>0.873878</td>
@@ -17039,7 +17223,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>[[7383, 616], [113, 1480]]</td>
     </tr>
     <tr>
-      <th>35</th>
+      <th>38</th>
       <td>Random Forest with Binning (feature selection)</td>
       <td>0.928437</td>
       <td>0.923682</td>
@@ -17051,7 +17235,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>[[7844, 155], [114, 1479]]</td>
     </tr>
     <tr>
-      <th>36</th>
+      <th>39</th>
       <td>Random Forest with Binning</td>
       <td>0.927809</td>
       <td>0.923173</td>
@@ -17063,7 +17247,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>[[7844, 155], [115, 1478]]</td>
     </tr>
     <tr>
-      <th>37</th>
+      <th>40</th>
       <td>Random Forest (Core + Interactions)</td>
       <td>0.927809</td>
       <td>0.861707</td>
@@ -17139,7 +17323,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
   </thead>
   <tbody>
     <tr>
-      <th>6</th>
+      <th>7</th>
       <td>Random Forest (Core + Burnout)</td>
       <td>0.940992</td>
       <td>0.896317</td>
@@ -17151,7 +17335,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>[[7508, 491], [94, 1499]]</td>
     </tr>
     <tr>
-      <th>7</th>
+      <th>8</th>
       <td>Random Forest (base)</td>
       <td>0.940364</td>
       <td>0.863799</td>
@@ -17227,7 +17411,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
   </thead>
   <tbody>
     <tr>
-      <th>6</th>
+      <th>7</th>
       <td>Random Forest (Core + Burnout)</td>
       <td>0.940992</td>
       <td>0.896317</td>
@@ -17239,7 +17423,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>[[7508, 491], [94, 1499]]</td>
     </tr>
     <tr>
-      <th>7</th>
+      <th>8</th>
       <td>Random Forest (base)</td>
       <td>0.940364</td>
       <td>0.863799</td>
@@ -17315,7 +17499,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
   </thead>
   <tbody>
     <tr>
-      <th>6</th>
+      <th>7</th>
       <td>Random Forest (Core + Burnout)</td>
       <td>0.940992</td>
       <td>0.896317</td>
@@ -17406,7 +17590,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>{'model__n_estimators': 300, 'model__min_sampl...</td>
       <td>0.940991</td>
       <td>[[7508, 491], [94, 1499]]</td>
-      <td>69.776211</td>
+      <td>66.278058</td>
     </tr>
   </tbody>
 </table>
@@ -17582,19 +17766,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
   </thead>
   <tbody>
     <tr>
-      <th>10</th>
-      <td>XGBoost (base)</td>
-      <td>0.936598</td>
-      <td>0.926018</td>
-      <td>0.910589</td>
-      <td>0.885986</td>
-      <td>0.969454</td>
-      <td>0.986294</td>
-      <td>18</td>
-      <td>[[7807, 192], [101, 1492]]</td>
-    </tr>
-    <tr>
-      <th>11</th>
+      <th>12</th>
       <td>XGBoost (Core + Burnout)</td>
       <td>0.936598</td>
       <td>0.923953</td>
@@ -17606,7 +17778,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>[[7789, 210], [101, 1492]]</td>
     </tr>
     <tr>
-      <th>12</th>
+      <th>13</th>
       <td>XGBoost with Binning</td>
       <td>0.936598</td>
       <td>0.924182</td>
@@ -17618,7 +17790,19 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>[[7791, 208], [101, 1492]]</td>
     </tr>
     <tr>
-      <th>13</th>
+      <th>14</th>
+      <td>XGBoost (base)</td>
+      <td>0.936598</td>
+      <td>0.926018</td>
+      <td>0.910589</td>
+      <td>0.885986</td>
+      <td>0.969454</td>
+      <td>0.986294</td>
+      <td>18</td>
+      <td>[[7807, 192], [101, 1492]]</td>
+    </tr>
+    <tr>
+      <th>15</th>
       <td>XGBoost with Binning (feature selection)</td>
       <td>0.935970</td>
       <td>0.926087</td>
@@ -17630,7 +17814,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>[[7812, 187], [102, 1491]]</td>
     </tr>
     <tr>
-      <th>14</th>
+      <th>17</th>
       <td>XGBoost with Flags (feature selection)</td>
       <td>0.935342</td>
       <td>0.926847</td>
@@ -17642,7 +17826,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>[[7823, 176], [103, 1490]]</td>
     </tr>
     <tr>
-      <th>17</th>
+      <th>19</th>
       <td>XGBoost with Flags</td>
       <td>0.934714</td>
       <td>0.925420</td>
@@ -17654,7 +17838,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>[[7815, 184], [104, 1489]]</td>
     </tr>
     <tr>
-      <th>19</th>
+      <th>21</th>
       <td>XGBoost with Interaction</td>
       <td>0.934087</td>
       <td>0.927565</td>
@@ -17666,7 +17850,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>[[7838, 161], [105, 1488]]</td>
     </tr>
     <tr>
-      <th>23</th>
+      <th>26</th>
       <td>XGBoost (Core + Interactions + Burnout)</td>
       <td>0.932203</td>
       <td>0.917346</td>
@@ -17678,7 +17862,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>[[7762, 237], [108, 1485]]</td>
     </tr>
     <tr>
-      <th>24</th>
+      <th>27</th>
       <td>XGBoost with Interaction (feature selection)</td>
       <td>0.931576</td>
       <td>0.925880</td>
@@ -17690,7 +17874,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>[[7841, 158], [109, 1484]]</td>
     </tr>
     <tr>
-      <th>26</th>
+      <th>30</th>
       <td>XGBoost (Core + Interactions)</td>
       <td>0.930948</td>
       <td>0.919747</td>
@@ -17766,19 +17950,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
   </thead>
   <tbody>
     <tr>
-      <th>10</th>
-      <td>XGBoost (base)</td>
-      <td>0.936598</td>
-      <td>0.926018</td>
-      <td>0.910589</td>
-      <td>0.885986</td>
-      <td>0.969454</td>
-      <td>0.986294</td>
-      <td>18</td>
-      <td>[[7807, 192], [101, 1492]]</td>
-    </tr>
-    <tr>
-      <th>11</th>
+      <th>12</th>
       <td>XGBoost (Core + Burnout)</td>
       <td>0.936598</td>
       <td>0.923953</td>
@@ -17790,7 +17962,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>[[7789, 210], [101, 1492]]</td>
     </tr>
     <tr>
-      <th>12</th>
+      <th>13</th>
       <td>XGBoost with Binning</td>
       <td>0.936598</td>
       <td>0.924182</td>
@@ -17802,7 +17974,19 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>[[7791, 208], [101, 1492]]</td>
     </tr>
     <tr>
-      <th>13</th>
+      <th>14</th>
+      <td>XGBoost (base)</td>
+      <td>0.936598</td>
+      <td>0.926018</td>
+      <td>0.910589</td>
+      <td>0.885986</td>
+      <td>0.969454</td>
+      <td>0.986294</td>
+      <td>18</td>
+      <td>[[7807, 192], [101, 1492]]</td>
+    </tr>
+    <tr>
+      <th>15</th>
       <td>XGBoost with Binning (feature selection)</td>
       <td>0.935970</td>
       <td>0.926087</td>
@@ -17814,7 +17998,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>[[7812, 187], [102, 1491]]</td>
     </tr>
     <tr>
-      <th>14</th>
+      <th>17</th>
       <td>XGBoost with Flags (feature selection)</td>
       <td>0.935342</td>
       <td>0.926847</td>
@@ -17890,19 +18074,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
   </thead>
   <tbody>
     <tr>
-      <th>10</th>
-      <td>XGBoost (base)</td>
-      <td>0.936598</td>
-      <td>0.926018</td>
-      <td>0.910589</td>
-      <td>0.885986</td>
-      <td>0.969454</td>
-      <td>0.986294</td>
-      <td>18</td>
-      <td>[[7807, 192], [101, 1492]]</td>
-    </tr>
-    <tr>
-      <th>11</th>
+      <th>12</th>
       <td>XGBoost (Core + Burnout)</td>
       <td>0.936598</td>
       <td>0.923953</td>
@@ -17914,7 +18086,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>[[7789, 210], [101, 1492]]</td>
     </tr>
     <tr>
-      <th>12</th>
+      <th>13</th>
       <td>XGBoost with Binning</td>
       <td>0.936598</td>
       <td>0.924182</td>
@@ -17926,7 +18098,19 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>[[7791, 208], [101, 1492]]</td>
     </tr>
     <tr>
-      <th>13</th>
+      <th>14</th>
+      <td>XGBoost (base)</td>
+      <td>0.936598</td>
+      <td>0.926018</td>
+      <td>0.910589</td>
+      <td>0.885986</td>
+      <td>0.969454</td>
+      <td>0.986294</td>
+      <td>18</td>
+      <td>[[7807, 192], [101, 1492]]</td>
+    </tr>
+    <tr>
+      <th>15</th>
       <td>XGBoost with Binning (feature selection)</td>
       <td>0.935970</td>
       <td>0.926087</td>
@@ -17938,7 +18122,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>[[7812, 187], [102, 1491]]</td>
     </tr>
     <tr>
-      <th>14</th>
+      <th>17</th>
       <td>XGBoost with Flags (feature selection)</td>
       <td>0.935342</td>
       <td>0.926847</td>
@@ -18014,7 +18198,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
   </thead>
   <tbody>
     <tr>
-      <th>11</th>
+      <th>12</th>
       <td>XGBoost (Core + Burnout)</td>
       <td>0.936598</td>
       <td>0.923953</td>
@@ -18105,7 +18289,7 @@ The primary stakeholder is the Human Resources (HR) department, as they will use
       <td>{'model__subsample': 1.0, 'model__scale_pos_we...</td>
       <td>0.936592</td>
       <td>[[7789, 210], [101, 1492]]</td>
-      <td>16.315838</td>
+      <td>16.022591</td>
     </tr>
   </tbody>
 </table>
@@ -18611,6 +18795,7 @@ Best overall performer across almost every metric, including F₂ (0.925), F₁ 
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><em>Logistic Regression performed competitively in terms of recall, capturing ~93% of true churn cases. However, it incurred nearly double the false positives compared to other models. This trade-off is acceptable given the model's simplicity, transparency, and strong performance across multiple metrics.</em></p>
 <p><em>The model will, however, be replaced, due to multicollinearity interfering with model interpretability</em></p>
+<p><strong>Suppression of multicollinearity</strong> by categorical variables. Department dummies are a set of mutually exclusive binary variables (one-hot encoded). When included, they "soak up" a lot of the variance in the data, especially variance that is shared among the other predictors. When you drop all department columns, the remaining variables (satisfaction, evaluation, projects, hours, tenure, etc.) are left to explain all the variance—including variance that was previously partitioned by department. If there are <strong>systematic differences</strong> between departments (e.g., some departments have higher average hours, tenure, or satisfaction), then removing department dummies means those differences now show up as correlations among the remaining variables.</p>
 
 </div>
 </div>
