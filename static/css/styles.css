@@ -61,9 +61,12 @@ table,
 
 .dataframe {
   width: 100%;
-  min-width: 600px;
   border-collapse: collapse;
   table-layout: auto;
+}
+
+.dataframe.wide {
+  min-width: 600px;
 }
 
 .dataframe th,

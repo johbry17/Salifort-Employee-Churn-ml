@@ -61,7 +61,8 @@ h4 {
   }
 }
 
-// Center tables
+// table / df styles
+// enter tables
 table,
 .dataframe {
   margin-left: auto !important;
@@ -78,16 +79,20 @@ table,
 
 .dataframe {
   width: 100%;
-  min-width: 600px; // adjust as needed for your smallest table
+  // min-width: 600px; // adjust as needed for smallest table
   border-collapse: collapse;
   table-layout: auto; // let browser size columns naturally
+}
+
+.dataframe.wide {
+  min-width: 600px;
 }
 
 .dataframe th,
 .dataframe td {
   white-space: normal; // allow wrapping
   text-align: center;
-  max-width: 180px; // adjust as needed
+  max-width: 180px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -103,11 +108,10 @@ table,
 .dataframe tbody tr {
   display: table;
   width: 100%;
-//   table-layout: auto;
-table-layout: fixed;
+  table-layout: fixed;
 }
 
-// Center images
+// center images
 .output_png,
 .output_svg,
 .output_jpeg,
