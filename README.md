@@ -44,11 +44,11 @@ All analysis is performed in Python using Jupyter Notebooks.
 
 Sample visualizations and results:
 
-- [Stisfaction Level vs Average Monthly Hours Plot](./resources/images/satisfaction_vs_average_monthly_hours.png)
+![Stisfaction Level vs Average Monthly Hours Plot](./resources/images/satisfaction_vs_average_monthly_hours.png)
 
-- [Box Plot of Satisfaction Level vs Average Monthly Hours Plot](./resources/images/box_plot_satisfaction_tenure.png)
+![Box Plot of Satisfaction Level vs Average Monthly Hours Plot](./resources/images/box_plot_satisfaction_tenure.png)
 
-- [Confusion Matrix Results](./resources/images/confusion_matrix_results.png)
+![Confusion Matrix Results](./resources/images/confusion_matrix_results.png)
 
 
 
