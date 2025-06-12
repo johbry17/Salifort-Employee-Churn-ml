@@ -91,6 +91,14 @@ table,
   table-layout: fixed;
 }
 
+table caption {
+  caption-side: top !important;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1em;
+  padding-bottom: 0.5em;
+}
+
 .output_png,
 .output_svg,
 .output_jpeg,
