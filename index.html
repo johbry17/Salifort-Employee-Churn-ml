@@ -14643,7 +14643,7 @@ document.addEventListener("DOMContentLoaded", function() {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="Table-of-Contents">Table of Contents<a class="anchor-link" href="#Table-of-Contents">&#182;</a></h1><ul>
-<li><a href="#exectuive-summary">Executive Summary</a><ul>
+<li><a href="#executive-summary">Executive Summary</a><ul>
 <li><a href="#1">Goal</a></li>
 <li><a href="#2">Key Findings</a></li>
 <li><a href="#3">Predictive Model Performance</a></li>
@@ -14673,7 +14673,7 @@ document.addEventListener("DOMContentLoaded", function() {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><a id="executive-summary"></a></p>
-<h1 id="Exectuive-Summary">Exectuive Summary<a class="anchor-link" href="#Exectuive-Summary">&#182;</a></h1><hr>
+<h1 id="Executive-Summary">Executive Summary<a class="anchor-link" href="#Executive-Summary">&#182;</a></h1><hr>
 <p><a href="#">Back to top</a></p>
 <h2 id="Goal">Goal<a id="1" /><a class="anchor-link" href="#Goal">&#182;</a></h2><p>The hypothetical Human Resources department at the fictional Salifort Motors, on behalf of company leadership and management, requested a comprehensive analysis of employee data to inform retention strategies. The goal of this project is twofold:</p>
 <ol>
@@ -14739,7 +14739,7 @@ document.addEventListener("DOMContentLoaded", function() {
 </ul>
 <hr>
 <h2 id="Conclusion">Conclusion<a id="7" /><a class="anchor-link" href="#Conclusion">&#182;</a></h2><p>This analysis equips Salifort Motors with powerful, data-driven tools to understand and reduce employee attrition. The combination of robust predictive modeling, actionable insights, and a commitment to fairness enables the company to retain talent more effectively and foster a healthier, more supportive workplace culture.</p>
-<p><sup><a id="footnote"></a>* For detailed analysis, see the [Exploratory Data Analysis](./notebooks/eda.html), [Model Construction & Validation](./notebooks/models.html), and full documentation in [Reference: Model Development](./notebooks/initial_work.html).</sup></p>
+<p><sup><a id="footnote"></a>* For detailed analysis, see the <a href="./notebooks/eda.html">Exploratory Data Analysis</a>, <a href="./notebooks/models.html">Model Construction &amp; Validation</a>, and full documentation in <a href="./notebooks/initial_work.html">Reference: Model Development</a>.</sup></p>
 
 </div>
 </div>
@@ -15099,11 +15099,11 @@ class="
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Following a focused exploratory data analysis, I entered model development with a clear sense of which features and relationships to explore. However, as this was only my second machine learning project, the learning curve was steep. I approached the modeling process ambitiously—iterating frequently, experimenting extensively, and making my share of mistakes along the way.</p>
 <p>One of the key challenges was a lack of explicit early-stage success criteria. While I had always intended to compare four model types (Logistic Regression, Decision Tree, Random Forest, and XGBoost), I initially aimed for a vague goal of “best recall,” loosely tempered by precision and simplicity. This unfocused objective led to prolonged tuning efforts far beyond the point of diminishing returns.</p>
-<p>I began with AUC as my optimization metric but realized that prioritizing recall better aligned with the business objective: minimizing false negatives (i.e., not missing employees likely to leave). This pivot dramatically improved performance, especially for Logistic Regression, which initially performed poorly on recall despite acceptable accuracy.</p>
+<p>I began with AUC as my optimization metric but rapidly realized that prioritizing recall better aligned with the business objective: minimizing false negatives (i.e., not missing employees likely to leave). This pivot dramatically improved performance, especially for Logistic Regression, which initially performed poorly on recall despite acceptable accuracy.</p>
 <p>From a modeling standpoint, I built parallel pipelines for logistic and tree-based models. For Logistic Regression, I removed extreme tenure outliers, which introduced a slight divergence between training sets. Going forward, I standardized all data preparation using <code>Pipeline</code> objects to streamline preprocessing, reduce errors, and prevent data leakage.</p>
 <p>I implemented stratified splits throughout training and validation to maintain class distribution. All models used cross-validation with Stratified K-Folds, and I progressively incorporated class weighting to account for imbalance.</p>
 <p>Hyperparameter tuning began with <code>GridSearchCV</code> but shifted to <code>RandomizedSearchCV</code> for computationally intensive models like Random Forest and XGBoost. This allowed me to iterate more efficiently while maintaining model quality. Ultimately, I tuned logistic and decision tree models via grid search and the ensemble models via random search.</p>
-<p>Feature engineering and selection were iterative, but gains eventually plateaued. To investigate further, I analyzed misclassifications from baseline models. The ambiguous nature of many false positives and negatives indicated that most misclassified employees fell into genuine gray zones—not easily distinguishable as stayers or leavers.</p>
+<p>Feature engineering and selection were iterative, but gains eventually plateaued. To investigate further, I analyzed misclassifications from baseline models. The ambiguous nature of many false positives and negatives indicated that most misclassified employees fell into genuine gray zones, not easily distinguishable as stayers or leavers.</p>
 <p>At this point, I finalized model selection criteria to align with both business and performance goals:</p>
 <ul>
 <li><p>A <strong>minimum recall threshold</strong> of 0.935</p>
@@ -15112,10 +15112,10 @@ class="
 </li>
 <li><p>Preference for models with <strong>fewer features</strong></p>
 </li>
-<li><p>Tie-breaking by <strong>highest F₂</strong>, followed by <strong>precision</strong></p>
+<li><p>Tie-breaking by <strong>highest F₁</strong>, followed by <strong>precision</strong></p>
 </li>
 </ul>
-<p>This framework allowed me to choose the strongest models with a well-balanced approach to performance and interpretability. With model pipelines finalized and selection criteria defined, I was ready for the final evaluation on the test set (<code>X_test</code> and <code>X_test_lr</code>)—to plot the results and translate the findings into actionable insights for stakeholders.</p>
+<p>This framework allowed me to choose the strongest models with a well-balanced approach to performance and interpretability. With model pipelines finalized and selection criteria defined, I was ready for the final evaluation on the test set (<code>X_test</code> and <code>X_test_lr</code>), and then to plot the results and translate the findings into actionable insights for stakeholders.</p>
 
 </div>
 </div>
