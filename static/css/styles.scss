@@ -148,7 +148,7 @@ table caption {
   margin: 16px auto;
 }
 
-// Circle icons
+// Spacer circle icons
 .center-icons {
   text-align: center !important;
 }
@@ -157,6 +157,18 @@ table caption {
   color: $primary-color;
   margin: 0 2px;
   font-size: 1.1em;
+  vertical-align: middle;
+}
+
+.small-circle {
+  font-size: 0.8em;
+}
+
+.globe-icon {
+  color: $primary-color;
+  font-size: 1.4em;
+  margin: 0 2px;
+  vertical-align: middle;
 }
 
 // Buttons
