@@ -1,35 +1,41 @@
 # Salifort Motors - Google Advanced Data Analytics Capstone
 
-A data analytics capstone project exploring employee attrition and workforce trends at the fictional auto company, Salifort Motors. This project combines data wrangling, exploratory data analysis, statistical modeling, and machine learning to support strategic HR decision-making.
+A machine learning data analytics capstone project exploring employee attrition and workforce trends at the fictional auto company, Salifort Motors.
 
----
-
-## Table of Contents
+Project results are hosted online as a web document [here](https://johbry17.github.io/Salifort-Motors-Google-Advanced-Data-Analytics-Capstone/index.html).
 
 - [Description](#description)
+- [Features](#features)
 - [Usage](#usage)
 - [Gallery](#gallery)
 - [References](#references)
-- [Licenses](#licenses)
+- [License](#license)
 - [Acknowledgements](#acknowledgements)
 - [Author](#author)
 
----
-
 ## Description
 
-This project investigates the drivers of employee attrition at Salifort Motors using a real-world-inspired HR dataset. The workflow includes:
+This project investigates the drivers of employee attrition at Salifort Motors using a real-world-inspired HR dataset, and includes statistical modeling and machine learning to support strategic HR decision-making. The workflow includes:
 - Data cleaning and preprocessing
 - Exploratory data analysis (EDA)
 - Predictive modeling (Logistic Regression, Decision Tree, Random Forest, XGBoost)
 - Model evaluation and interpretation
+- Results communicated online, for both technical and general audiences
 - Business recommendations for employee retention
 
 All analysis is performed in Python using Jupyter Notebooks.
 
----
+## Features
+
+- Interactive and visually-rich exploratory data analysis
+- Multiple machine learning models for attrition prediction
+- SHAP and feature importance visualizations for model interpretability
+- Clean, web-friendly presentation of results for technical and non-technical audiences
+- Actionable business recommendations
 
 ## Usage
+
+All analysis can be found online at [project site](https://johbry17.github.io/Salifort-Motors-Google-Advanced-Data-Analytics-Capstone/index.html).
 
 1. Clone the repository.
 2. Install required dependencies from `requirements.txt`.
@@ -44,36 +50,34 @@ All analysis is performed in Python using Jupyter Notebooks.
 
 Sample visualizations and results:
 
-![Stisfaction Level vs Average Monthly Hours Plot](./resources/images/satisfaction_vs_average_monthly_hours.png)
-
-![Box Plot of Satisfaction Level vs Average Monthly Hours Plot](./resources/images/box_plot_satisfaction_tenure.png)
+![Satisfaction Level vs Average Monthly Hours Plot](./resources/images/satisfaction_vs_average_monthly_hours.png)
 
 ![Confusion Matrix Results](./resources/images/confusion_matrix_results.png)
 
+![XGBoost SHAP Summary](./resources/images/xgboost_shap.png)
 
+![Misclassified Predicted Probability](./resources/images/predicted_probability_misclassified.png)
 
----
+![Decision Tree](./resources/images/decision_tree.png)
+
+![Promotion](./resources/images/promotion.png)
+
+![Feature Importances](./resources/images/feature_importances.png)
 
 ## References
 
 - [Google Advanced Data Analytics Capstone](https://www.coursera.org/professional-certificates/google-advanced-data-analytics)
 - [Kaggle HR Analytics Dataset](https://www.kaggle.com/datasets/ludobenistant/hr-analytics-job-change-of-data-scientists) (inspiration)
 
----
+## License
 
-## Licenses
-
-This project is for educational purposes only. See [LICENSE](LICENSE) for details.
-
----
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
 
 ## Acknowledgements
 
 Many thanks for header and style inspiration to Start Bootstrap's Clean Blog v6.0.9 (https://startbootstrap.com/theme/clean-blog). Copyright 2013-2023 Start Bootstrap. Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-clean-blog/blob/master/LICENSE)
 
 Many thanks also to Google and Coursera for the capstone framework and the opportunity to learn.
-
----
 
 ## Author
 
