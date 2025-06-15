@@ -15,11 +15,15 @@ body {
 
 h1 {
   color: $primary-color;
-  font-weight: bold;
+  font-weight: bold !important;
+  letter-spacing: 1px;
+  text-decoration: underline;
+  // text-underline-offset: 6px;
+  text-shadow: 1px 2px 8px rgba(25, 135, 84, 0.08);
 }
 
 h2 {
-  font-weight: bold;
+  // font-weight: bold;
   color: $primary-color;
 }
 
@@ -113,11 +117,11 @@ table,
 
 // table header title
 table caption {
-    caption-side: top !important;
-    text-align: center;
-    font-weight: bold;
-    font-size: 1.1em;
-    padding-bottom: 0.5em;
+  caption-side: top !important;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1em;
+  padding-bottom: 0.5em;
 }
 
 // center images
@@ -146,6 +150,19 @@ table caption {
   background: #f9f9f9;
   width: 80%;
   margin: 16px auto;
+  overflow-x: auto;
+}
+
+// Card styles
+.card {
+  background: $white;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  padding: 20px;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 900px;
+  overflow-x: auto;
 }
 
 // Spacer circle icons
@@ -196,6 +213,9 @@ table caption {
       color: $yellow !important;
       padding: 10px 20px;
       border-radius: 5px;
+      transition: scale 0.5s ease, box-shadow 0.3s ease;
+      transform: scale(1.04);
+      box-shadow: 0 2px 8px rgba(25, 135, 84, 0.15);
     }
   }
 }
