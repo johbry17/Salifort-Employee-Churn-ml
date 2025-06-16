@@ -18,12 +18,10 @@ h1 {
   font-weight: bold !important;
   letter-spacing: 1px;
   text-decoration: underline;
-  // text-underline-offset: 6px;
   text-shadow: 1px 2px 8px rgba(25, 135, 84, 0.08);
 }
 
 h2 {
-  // font-weight: bold;
   color: $primary-color;
 }
 
@@ -65,67 +63,6 @@ h4 {
   }
 }
 
-// Table / df styles
-// center tables
-table,
-.dataframe {
-  margin-left: auto !important;
-  margin-right: auto !important;
-  text-align: center !important;
-}
-
-// scrollable tables
-.scroll-table {
-  width: 100%;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch; // for smooth scrolling on iOS
-}
-
-.dataframe {
-  width: 100%;
-  // min-width: 600px; // adjust as needed for smallest table
-  border-collapse: collapse;
-  table-layout: auto; // let browser size columns naturally
-}
-
-.dataframe.wide {
-  min-width: 600px;
-}
-
-.dataframe {
-  th,
-  td {
-    white-space: normal; // allow wrapping
-    text-align: center;
-    max-width: 180px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  // vertical scroll
-  tbody {
-    display: block;
-    max-height: 400px;
-    overflow-y: auto;
-  }
-
-  thead,
-  tbody tr {
-    display: table;
-    width: 100%;
-    table-layout: fixed;
-  }
-}
-
-// Table header title
-table caption {
-  caption-side: top !important;
-  text-align: center;
-  font-weight: bold;
-  font-size: 1.1em;
-  padding-bottom: 0.5em;
-}
-
 // Center images / plots
 .output_png,
 .output_svg,
@@ -137,10 +74,38 @@ table caption {
   margin-right: auto;
   text-align: center;
 }
-
 .output_html {
   display: flex;
   justify-content: center;
+}
+
+// Jupyter Markdown cell box
+.jp-MarkdownCell {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  padding: 24px;
+  margin: 24px auto 24px auto;
+  width: 95%;
+  max-width: 900px;
+}
+// Suppress margins of hidden cells
+.jp-CodeCell:not(:has(.jp-InputArea, .jp-OutputArea)) {
+  margin: 0 !important;
+  padding: 0 !important;
+  min-height: 0 !important;
+}
+// Hide input prompts in code cells
+// (e.g., remove "In [1]:", which margin-lefts the entire page)
+.jp-InputPrompt,
+.prompt,
+.input_prompt {
+  display: none !important;
+}
+.jp-CodeCell .jp-InputArea,
+.cell.code_cell .input_area {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
 }
 
 // Emphasis box
@@ -167,40 +132,75 @@ table caption {
 //   overflow-x: auto;
 // }
 
-// Jupyter Markdown cell box
-.jp-MarkdownCell {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-  padding: 20px;
-  margin: 24px auto 24px auto;
-  width: 95%;
-  max-width: 900px;
+// Table / df styles
+// center tables
+table,
+.dataframe {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center !important;
 }
+// scrollable tables
+.scroll-table {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; // for smooth scrolling on iOS
+}
+.dataframe {
+  width: 100%;
+  // min-width: 600px; // adjust as needed for smallest table
+  border-collapse: collapse;
+  table-layout: auto; // let browser size columns naturally
+}
+.dataframe.wide {
+  min-width: 700px;
+}
+.dataframe {
+  th,
+  td {
+    white-space: normal; // allow wrapping
+    text-align: center;
+    max-width: 180px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 
-// Suppress margins of hidden cells
-.jp-CodeCell:not(:has(.jp-InputArea, .jp-OutputArea)) {
-  margin: 0 !important;
-  padding: 0 !important;
-  min-height: 0 !important;
+  // vertical scroll
+  tbody {
+    display: block;
+    max-height: 400px;
+    overflow-y: auto;
+  }
+
+  thead,
+  tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
+}
+// Table header title
+table caption {
+  caption-side: top !important;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1em;
+  padding-bottom: 0.5em;
 }
 
 // Section spacer - circle icons
 .center-icons {
   text-align: center !important;
 }
-
 .spacer-icons {
   color: $primary-color;
   margin: 0 2px;
   font-size: 1.1em;
   vertical-align: middle;
 }
-
 .small-circle {
   font-size: 0.8em;
 }
-
 .globe-icon {
   color: $primary-color;
   font-size: 1.4em;
@@ -240,6 +240,7 @@ table caption {
   }
 }
 
+// Navbar Styles
 // Hamburger menu dropdown
 .collapse {
   display: none;
@@ -421,8 +422,7 @@ Courtesty of:
   }
 }
 
-
-/* Footer Styles */
+// Footer Styles
 .site-footer {
   margin-top: 2em;
   padding: 1em 0;
@@ -475,7 +475,7 @@ Courtesty of:
 }
 .site-footer .footer-links a:hover,
 .site-footer .footer-links a:focus {
-  color: #0085A1 !important;
+  color: #0085a1 !important;
   text-decoration: underline;
 }
 @media (max-width: 600px) {

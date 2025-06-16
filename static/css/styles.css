@@ -48,6 +48,61 @@ h4 {
   transition: color 0.3s ease;
 }
 
+.output_png,
+.output_svg,
+.output_jpeg,
+.output_image,
+.jp-RenderedImage img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.output_html {
+  display: flex;
+  justify-content: center;
+}
+
+.jp-MarkdownCell {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  padding: 24px;
+  margin: 24px auto 24px auto;
+  width: 95%;
+  max-width: 900px;
+}
+
+.jp-CodeCell:not(:has(.jp-InputArea, .jp-OutputArea)) {
+  margin: 0 !important;
+  padding: 0 !important;
+  min-height: 0 !important;
+}
+
+.jp-InputPrompt,
+.prompt,
+.input_prompt {
+  display: none !important;
+}
+
+.jp-CodeCell .jp-InputArea,
+.cell.code_cell .input_area {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
+
+.emphasis-box {
+  border: 2px solid #1d5d5c;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 12px;
+  background: #f9f9f9;
+  width: 80%;
+  margin: 16px auto;
+  overflow-x: auto;
+}
+
 table,
 .dataframe {
   margin-left: auto !important;
@@ -68,7 +123,7 @@ table,
 }
 
 .dataframe.wide {
-  min-width: 600px;
+  min-width: 700px;
 }
 
 .dataframe th,
@@ -97,49 +152,6 @@ table caption {
   font-weight: bold;
   font-size: 1.1em;
   padding-bottom: 0.5em;
-}
-
-.output_png,
-.output_svg,
-.output_jpeg,
-.output_image,
-.jp-RenderedImage img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-
-.output_html {
-  display: flex;
-  justify-content: center;
-}
-
-.emphasis-box {
-  border: 2px solid #1d5d5c;
-  border-radius: 6px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 12px;
-  background: #f9f9f9;
-  width: 80%;
-  margin: 16px auto;
-  overflow-x: auto;
-}
-
-.jp-MarkdownCell {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
-  padding: 20px;
-  margin: 24px auto 24px auto;
-  width: 95%;
-  max-width: 900px;
-}
-
-.jp-CodeCell:not(:has(.jp-InputArea, .jp-OutputArea)) {
-  margin: 0 !important;
-  padding: 0 !important;
-  min-height: 0 !important;
 }
 
 .center-icons {
@@ -342,7 +354,6 @@ Courtesty of:
   }
 }
 
-/* Footer Styles */
 .site-footer {
   margin-top: 2em;
   padding: 1em 0;
@@ -403,7 +414,7 @@ Courtesty of:
 
 .site-footer .footer-links a:hover,
 .site-footer .footer-links a:focus {
-  color: #0085A1 !important;
+  color: #0085a1 !important;
   text-decoration: underline;
 }
 

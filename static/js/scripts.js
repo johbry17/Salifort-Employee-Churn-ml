@@ -40,6 +40,22 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// set minimum width for wider dataframes
+document.addEventListener("DOMContentLoaded", function() {
+  // Adjust this threshold as needed
+  const wideThreshold = 6;
+  document.querySelectorAll("table.dataframe").forEach(function(tbl) {
+    // Count columns in the first row of thead or tbody
+    const colCount =
+      tbl.querySelector("thead tr")?.children.length ||
+      tbl.querySelector("tbody tr")?.children.length ||
+      0;
+    if (colCount >= wideThreshold) {
+      tbl.classList.add("wide");
+    }
+  });
+});
+
 // insert the circle separator at a specific element or selector
 function insertCircleSeparator(targetSelector) {
   const separatorHTML = `
