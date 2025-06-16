@@ -65,8 +65,8 @@ h4 {
   }
 }
 
-// table / df styles
-// enter tables
+// Table / df styles
+// center tables
 table,
 .dataframe {
   margin-left: auto !important;
@@ -92,30 +92,32 @@ table,
   min-width: 600px;
 }
 
-.dataframe th,
-.dataframe td {
-  white-space: normal; // allow wrapping
-  text-align: center;
-  max-width: 180px;
-  overflow: hidden;
-  text-overflow: ellipsis;
+.dataframe {
+  th,
+  td {
+    white-space: normal; // allow wrapping
+    text-align: center;
+    max-width: 180px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  // vertical scroll
+  tbody {
+    display: block;
+    max-height: 400px;
+    overflow-y: auto;
+  }
+
+  thead,
+  tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
 }
 
-// vertical scroll for tbody
-.dataframe tbody {
-  display: block;
-  max-height: 400px;
-  overflow-y: auto;
-}
-
-.dataframe thead,
-.dataframe tbody tr {
-  display: table;
-  width: 100%;
-  table-layout: fixed;
-}
-
-// table header title
+// Table header title
 table caption {
   caption-side: top !important;
   text-align: center;
@@ -124,7 +126,7 @@ table caption {
   padding-bottom: 0.5em;
 }
 
-// center images
+// Center images / plots
 .output_png,
 .output_svg,
 .output_jpeg,
@@ -153,19 +155,37 @@ table caption {
   overflow-x: auto;
 }
 
-// Card styles
-.card {
-  background: $white;
+// // Card styles (unused)
+// .card {
+//   background: $white;
+//   border-radius: 10px;
+//   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+//   padding: 20px;
+//   margin: 0 auto;
+//   width: 90%;
+//   max-width: 900px;
+//   overflow-x: auto;
+// }
+
+// Jupyter Markdown cell box
+.jp-MarkdownCell {
+  background: #fff;
   border-radius: 10px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
   padding: 20px;
-  margin: 0 auto;
-  width: 90%;
+  margin: 24px auto 24px auto;
+  width: 95%;
   max-width: 900px;
-  overflow-x: auto;
 }
 
-// Spacer circle icons
+// Suppress margins of hidden cells
+.jp-CodeCell:not(:has(.jp-InputArea, .jp-OutputArea)) {
+  margin: 0 !important;
+  padding: 0 !important;
+  min-height: 0 !important;
+}
+
+// Section spacer - circle icons
 .center-icons {
   text-align: center !important;
 }
@@ -230,7 +250,7 @@ table caption {
   }
 }
 
-// Navbar
+// Navbar, inspired by Clean Blog (copyright / license below)
 .custom-navbar {
   background: $white;
   border-bottom: 1px solid $gray-border;
