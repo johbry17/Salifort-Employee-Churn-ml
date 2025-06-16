@@ -1,8 +1,8 @@
-# Salifort Motors - Google Advanced Data Analytics Capstone
+# Salifort Motors Employee Churn - Google Advanced Data Analytics Capstone
 
 A machine learning data analytics capstone project exploring employee attrition and workforce trends at the fictional auto company, Salifort Motors.
 
-Project results are hosted online as a web document [here](https://johbry17.github.io/Salifort-Motors-Google-Advanced-Data-Analytics-Capstone/index.html).
+Project results are hosted online as a web document [here](https://johbry17.github.io/Salifort-Employee-Churn-ml/).
 
 - [Description](#description)
 - [Features](#features)
@@ -35,7 +35,7 @@ All analysis is performed in Python using Jupyter Notebooks.
 
 ## Usage
 
-All analysis can be found online at [project site](https://johbry17.github.io/Salifort-Motors-Google-Advanced-Data-Analytics-Capstone/index.html).
+All analysis can be found online at [project site](https://johbry17.github.io/Salifort-Employee-Churn-ml/).
 
 1. Clone the repository.
 2. Install required dependencies from `requirements.txt`.
