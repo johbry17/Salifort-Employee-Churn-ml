@@ -67,7 +67,7 @@ Sample visualizations and results:
 ## References
 
 - [Google Advanced Data Analytics Capstone](https://www.coursera.org/professional-certificates/google-advanced-data-analytics)
-- [Kaggle HR Analytics Dataset](https://www.kaggle.com/datasets/ludobenistant/hr-analytics-job-change-of-data-scientists) (inspiration)
+- [Kaggle HR Analytics Dataset](https://www.kaggle.com/datasets/mfaisalqureshi/hr-analytics-and-job-prediction) (inspiration)
 
 ## License
 
