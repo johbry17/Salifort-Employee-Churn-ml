@@ -35,8 +35,8 @@ h4 {
   background: linear-gradient(90deg, #198754 50%, rgba(21, 115, 71, 0.35) 100%);
   color: #fff;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(25,135,84,0.10);
-  padding: 24px 0 18px 0;
+  box-shadow: 0 4px 12px rgba(25, 135, 84, 0.1);
+  padding: 32px 0 24px 0;
   margin: 0 auto 24px auto;
   width: 60%;
   text-align: center;
@@ -46,26 +46,41 @@ h4 {
   .project-banner-main {
     font-size: 2.1em;
     font-weight: 800;
-    letter-spacing: 1px;
-    text-shadow: 1px 2px 8px rgba(25,135,84,0.08);
+    letter-spacing: 2px;
+    text-shadow: 1px 2px 8px rgba(25, 135, 84, 0.08);
     display: flex;
     justify-content: center;
     gap: 0.5em;
   }
   .project-banner-sub {
+    display: block;
     font-size: 1.2em;
     font-weight: 400;
     color: #f7f7f7;
+    font-style: italic;
+    margin-top: 0.5em;
+  }
+  .at-risk {
+    background: linear-gradient(90deg, #ffe066, #ff6f00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
   }
 }
 @media (max-width: 750px) {
   .project-banner {
     width: 80%;
+    padding: 24px 0 18px 0;
     .project-banner-main {
       flex-direction: column;
       gap: 0;
-      .classified, .at-risk {
+      .classified,
+      .at-risk {
         display: block;
+        background: linear-gradient(90deg, #ffe066 0%, #ff9800 60%, #ff3d00 75%, #ff3d00 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 900;
       }
     }
   }
