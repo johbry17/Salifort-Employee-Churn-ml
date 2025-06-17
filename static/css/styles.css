@@ -19,6 +19,45 @@ h4 {
   font-weight: bold;
 }
 
+.project-banner {
+  background: linear-gradient(90deg, #198754 50%, rgba(21, 115, 71, 0.35) 100%);
+  color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(25, 135, 84, 0.1);
+  padding: 24px 0 18px 0;
+  margin: 0 auto 24px auto;
+  width: 60%;
+  text-align: center;
+  border: 2px solid #1d5d5c;
+  font-family: inherit;
+}
+.project-banner .project-banner-main {
+  font-size: 2.1em;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-shadow: 1px 2px 8px rgba(25, 135, 84, 0.08);
+  display: flex;
+  justify-content: center;
+  gap: 0.5em;
+}
+.project-banner .project-banner-sub {
+  font-size: 1.2em;
+  font-weight: 400;
+  color: #f7f7f7;
+}
+
+@media (max-width: 750px) {
+  .project-banner {
+    width: 80%;
+  }
+  .project-banner .project-banner-main {
+    flex-direction: column;
+    gap: 0;
+  }
+  .project-banner .project-banner-main .classified, .project-banner .project-banner-main .at-risk {
+    display: block;
+  }
+}
 #title {
   background-color: #198754;
   color: #ffffff;
@@ -34,6 +73,7 @@ h4 {
   text-align: center;
   margin: 0 auto;
   transition: color 0.3s ease;
+  background: linear-gradient(90deg, #198754 50%, #157347 100%);
 }
 #title:hover {
   color: #e9c46a;
