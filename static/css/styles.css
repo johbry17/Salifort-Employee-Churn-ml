@@ -179,7 +179,7 @@ table caption {
 .button {
   display: flex;
   justify-content: center;
-  margin: 20px 0;
+  margin: 10px 0;
 }
 .button a {
   background-color: #198754;
@@ -203,6 +203,29 @@ table caption {
   transition: scale 0.5s ease, box-shadow 0.3s ease;
   transform: scale(1.04);
   box-shadow: 0 2px 8px rgba(25, 135, 84, 0.15);
+}
+
+.button-row {
+  display: flex;
+  gap: 15em;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@media (max-width: 750px) {
+  .button-row {
+    flex-direction: column;
+    gap: 1em;
+  }
+}
+
+.button-section-title {
+  text-align: center;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  font-size: 1.25em;
+  color: #343a40;
+  font-weight: 600;
 }
 
 .collapse {
