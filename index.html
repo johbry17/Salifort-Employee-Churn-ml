@@ -14664,7 +14664,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <li><a href="#2">Key Findings</a></li>
 <li><a href="#3">Predictive Model Performance</a></li>
 <li><a href="#4">Business Insights</a></li>
-<li><a href="#5">Recommendations</a></li>
+<li><a href="#5">Retention Measures</a></li>
 <li><a href="#6">Next Steps</a></li>
 <li><a href="#7">Conclusion</a></li>
 </ul>
@@ -14679,6 +14679,19 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </li>
 <li><a href="#appendix-data-dictionaries">Appendix: Data Dictionaries</a></li>
 </ul>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><strong>Note:</strong><br>
+Completed as the capstone for the <a href="https://www.coursera.org/professional-certificates/google-advanced-data-analytics" target="_blank">Google Advanced Data Analytics Certificate</a>, in true autodidact fashion I took this project as the opportunity to go far beyond the minimum requirements and really explore the ins and out of machine learning, model evaluation, and interpretability. I learned a lot. That journey is covered in the second part of this page, the <a href="#narrative-walkthrough">Narrative Walkthrough</a>, which doubles as a layperson-friendly introduction to machine learning.</p>
+<p>The remainder of the project is structured as a real-world business scenario, beginning with the immediately following <a href="#executive-summary">Executive Summary</a> for quick business insights, and supported by sections for <a href="./notebooks/eda.html">Exploratory Data Analysis</a>, <a href="./notebooks/models.html">Model Construction &amp; Validation</a>, and <a href="./notebooks/initial_work.html">Reference: Model Development</a>.</p>
 
 </div>
 </div>
@@ -14718,7 +14731,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <p>The model correctly identifies most churn cases, while only occasionally flagging borderline employees who are not actually at risk. These trade-offs are acceptable, especially given the high cost of unaddressed attrition.</p>
 <p>Other models (Logistic Regression, Decision Tree, and Random Forest) were used to cross-validate feature importance and provide interpretability. All models pointed to consistent risk factors: extreme workloads, low satisfaction, and tenure around 3–4 years.</p>
 <hr>
-<h2 id="Business-Insights:">Business Insights:<a id="4" /><a class="anchor-link" href="#Business-Insights:">&#182;</a></h2><ul>
+<h2 id="Business-Insights">Business Insights<a id="4" /><a class="anchor-link" href="#Business-Insights">&#182;</a></h2><ul>
 <li><p><strong>Burnout &amp; Disengagement</strong>: Employees with very high or very low workloads are at elevated risk, especially if satisfaction is low.</p>
 </li>
 <li><p><strong>Gray Area Misclassifications</strong>: Some leavers do not fit typical profiles. Additional data, such as qualitative feedback or behavioral indicators, could improve future model accuracy.</p>
@@ -14729,22 +14742,27 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </li>
 </ul>
 <hr>
-<h2 id="Recommendations:">Recommendations:<a id="5" /><a class="anchor-link" href="#Recommendations:">&#182;</a></h2><ol>
-<li><p><strong>Track Satisfaction &amp; Workload</strong>: Use surveys and internal metrics to monitor these key drivers.</p>
+<h2 id="Retention-Measures">Retention Measures<a id="5" /><a class="anchor-link" href="#Retention-Measures">&#182;</a></h2><p>To reduce churn, Salifort Motors can implement the following:</p>
+<ol>
+<li><p><strong>Monitor Satisfaction &amp; Workload</strong>: Use regular surveys and workload tracking to spot early burnout or disengagement.</p>
 </li>
-<li><p><strong>Prioritize 3–4 Year Employees</strong>: Target retention efforts at employees approaching or within this critical tenure range.</p>
+<li><p><strong>Communicate Model Use Transparently</strong>: Explain how churn predictions support, not punish, employees.</p>
 </li>
-<li><p><strong>Expand Promotion Opportunities</strong>: Recognize and advance internal talent to improve morale and reduce churn.</p>
+<li><p><strong>Foster Open Culture Dialogue</strong>: Hold discussions on company culture and employee experience.</p>
 </li>
-<li><p><strong>Promote Work-Life Balance</strong>: Avoid excessive workloads and support sustainable productivity.</p>
+<li><p><strong>Clarify and Cap Workload</strong>: Define expectations and set limits on projects and hours to prevent burnout.</p>
 </li>
-<li><p><strong>Conduct Stay Interviews</strong>: Talk to employees at key milestones to understand and proactively address concerns.</p>
+<li><p><strong>Promote Work-Life Balance</strong>: Encourage reasonable workloads and sustainable scheduling.</p>
 </li>
-<li><p><strong>Ensure Transparency</strong>: Clearly communicate how employee data and predictive models are used to build trust and fairness.</p>
+<li><p><strong>Conduct Stay Interviews</strong>: Engage employees nearing 4-year tenure to address concerns early.</p>
+</li>
+<li><p><strong>Recognize and Promote Talent</strong>: Offer advancement and recognition, especially near key tenure milestones.</p>
+</li>
+<li><p><strong>Target Retention Efforts</strong>: Focus on those with low satisfaction and extreme workloads, particularly in the 3–4 year window.</p>
 </li>
 </ol>
 <hr>
-<h2 id="Next-Steps:">Next Steps:<a id="6" /><a class="anchor-link" href="#Next-Steps:">&#182;</a></h2><ul>
+<h2 id="Next-Steps">Next Steps<a id="6" /><a class="anchor-link" href="#Next-Steps">&#182;</a></h2><ul>
 <li><p><strong>Model Deployment</strong>: Integrate the model into HR systems to support early interventions.</p>
 </li>
 <li><p><strong>Data Enrichment</strong>: Incorporate engagement surveys and manager feedback to refine predictions.</p>
@@ -16342,7 +16360,7 @@ And it’s enough to help HR stay ahead of the curve, before the next resignatio
 <p><a href="#">Back to top</a></p>
 <p><strong>Original Dataset</strong></p>
 <p>After removing duplicates, the dataset contained 11,991 rows and 10 columns for the variables listed below.</p>
-<p><strong>Note:</strong> For more information about the data, refer to its source on <a href="https://www.kaggle.com/datasets/mfaisalqureshi/hr-analytics-and-job-prediction?select=HR_comma_sep.csv">Kaggle</a>.</p>
+<p><strong>Note:</strong> For more information about the data, refer to its source on <a href="https://www.kaggle.com/datasets/mfaisalqureshi/hr-analytics-and-job-prediction?select=HR_comma_sep.csv" target="_blank">Kaggle</a>. The data has been repurposed and adapted for this project as part of the <a href="https://www.coursera.org/professional-certificates/google-advanced-data-analytics" target="_blank">Google Advanced Data Analytics Capstone</a>.</p>
 <table>
 <thead><tr>
 <th>Variable</th>
