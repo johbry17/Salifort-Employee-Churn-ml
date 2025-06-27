@@ -1,37 +1,49 @@
 # Salifort Motors Employee Churn - Google Advanced Data Analytics Capstone
 
-A machine learning data analytics capstone project exploring employee attrition and workforce trends at the fictional auto company, Salifort Motors.
+*Can machine learning help predict and reduce employee turnover? Real-world HR modeling techniques uncover attrition patterns at a fictional automaker.*
 
-Project results are hosted online as a web document [here](https://johbry17.github.io/Salifort-Employee-Churn-ml/).
+📄 [Live Report](https://johbry17.github.io/Salifort-Employee-Churn-ml/)
 
-- [Description](#description)
+## Table of Contents
+
+- [Project Overview](#project-overview)
 - [Features](#features)
+- [Tools & Technologies](#tools--technologies)
 - [Usage](#usage)
 - [Gallery](#gallery)
+- [Certificate](#certificate)
 - [References](#references)
 - [License](#license)
 - [Acknowledgements](#acknowledgements)
 - [Author](#author)
 
-## Description
+## Project Overview
 
-This project investigates the drivers of employee attrition at Salifort Motors using a real-world-inspired HR dataset, and includes statistical modeling and machine learning to support strategic HR decision-making. The workflow includes:
-- Data cleaning and preprocessing
+**Salifort Motors** is a fictional car company facing high employee turnover. This project models and explains the drivers of attrition using a structured ML workflow:
+
+- Data wrangling & preprocessing
 - Exploratory data analysis (EDA)
-- Predictive modeling (Logistic Regression, Decision Tree, Random Forest, XGBoost)
-- Model evaluation and interpretation
-- Results communicated online, for both technical and general audiences
-- Business recommendations for employee retention
+- Predictive modeling with multiple classifiers
+- Model evaluation and interpretability (SHAP, feature importance)
+- Final recommendations for HR strategy and retention
 
-All analysis is performed in Python using Jupyter Notebooks.
+Hosted online as an interactive web report aimed at both technical and general audiences.
 
 ## Features
 
-- Interactive and visually-rich exploratory data analysis
-- Multiple machine learning models for attrition prediction
-- SHAP and feature importance visualizations for model interpretability
-- Clean, web-friendly presentation of results for technical and non-technical audiences
-- Actionable business recommendations
+- 📊 Interactive visual EDA (Seaborn, Matplotlib)
+- 🤖 Four predictive models: Logistic Regression, Decision Tree, Random Forest, XGBoost
+- 🔍 Model evaluation: confusion matrices, recall scores, misclassification analysis
+- 🧠 SHAP and feature importances for explainability
+- 💬 Executive summary with actionable business takeaways
+
+## Tools & Technologies
+
+- **Language:** Python
+- **Libraries:** pandas, seaborn, matplotlib, scikit-learn, xgboost, statsmodels, shap
+- **Environment:** Jupyter Notebook
+- **Deployment:** GitHub Pages (HTML report)
+
 
 ## Usage
 
@@ -44,13 +56,15 @@ All analysis can be found online at [project site](https://johbry17.github.io/Sa
     - `models.ipynb` for model development and evaluation
     - `executive_summary.ipynb` for a project overview and key findings
 
----
-
 ## Gallery
 
-Sample visualizations and results:
+EDA Insights:
 
 ![Satisfaction Level vs Average Monthly Hours Plot](./resources/images/satisfaction_vs_average_monthly_hours.png)
+
+![Promotion](./resources/images/promotion.png)
+
+Model Results:
 
 ![Confusion Matrix Results](./resources/images/confusion_matrix_results.png)
 
@@ -60,9 +74,13 @@ Sample visualizations and results:
 
 ![Decision Tree](./resources/images/decision_tree.png)
 
-![Promotion](./resources/images/promotion.png)
-
 ![Feature Importances](./resources/images/feature_importances.png)
+
+## Certificate
+
+Final capstone project for [Google Advanced Data Analytics Professional Certificate](https://www.coursera.org/professional-certificates/google-advanced-data-analytics):
+
+![Google Data Analytics Certificate](./resources/images/google_advanced_data_analytics_certificate.png)
 
 ## References
 
@@ -71,15 +89,14 @@ Sample visualizations and results:
 
 ## License
 
-This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+MIT License © 2025 Bryan Johns. See [LICENSE](LICENSE) for details.
 
 ## Acknowledgements
 
-Many thanks for header and style inspiration to Start Bootstrap's Clean Blog v6.0.9 (https://startbootstrap.com/theme/clean-blog). Copyright 2013-2023 Start Bootstrap. Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-clean-blog/blob/master/LICENSE)
-
-Many thanks also to Google and Coursera for the capstone framework and the opportunity to learn.
+- Thanks to Google and Coursera for the capstone structure.
+- Style inspiration for header from [Start Bootstrap Clean Blog](https://startbootstrap.com/theme/clean-blog)
 
 ## Author
 
-Bryan Johns
-June 2025
+Bryan Johns, June 2025  
+[bryan.johns.official@gmail.com](mailto:bryan.johns.official@gmail.com) | [LinkedIn](https://www.linkedin.com/in/b-johns/) | [GitHub](https://github.com/johbry17) | [Portfolio](https://johbry17.github.io/portfolio/index.html)
