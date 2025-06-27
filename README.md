@@ -2,7 +2,7 @@
 
 *Can machine learning help predict and reduce employee turnover? Real-world HR modeling techniques uncover attrition patterns at a fictional automaker.*
 
-📄 [Live Report](https://johbry17.github.io/Salifort-Employee-Churn-ml/)
+🔗 [Live Report](https://johbry17.github.io/Salifort-Employee-Churn-ml/)
 
 ## Table of Contents
 
