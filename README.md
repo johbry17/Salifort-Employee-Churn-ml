@@ -1,4 +1,5 @@
-# Salifort Motors Employee Churn - Google Advanced Data Analytics Capstone
+# Classified: At Risk — Salifort Motors Employee Attrition Prediction  
+<span style="font-size:1.1em; color:#555;">Google Advanced Data Analytics Capstone</span>
 
 *Can machine learning help predict and reduce employee turnover? Real-world HR modeling techniques uncover attrition patterns at a fictional automaker.*
 
