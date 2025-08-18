@@ -33,11 +33,11 @@ Hosted online as an interactive web report aimed at both technical and general a
 
 ## Features
 
-- 📊 Interactive visual EDA (Seaborn, Matplotlib)
-- 🤖 Four predictive models: Logistic Regression, Decision Tree, Random Forest, XGBoost
-- 🔍 Model evaluation: confusion matrices, recall scores, misclassification analysis
-- 🧠 SHAP and feature importances for explainability
-- 💬 Executive summary with actionable business takeaways
+- Interactive visual EDA (Seaborn, Matplotlib)
+- Four predictive models: Logistic Regression, Decision Tree, Random Forest, XGBoost
+- Model evaluation: confusion matrices, recall scores, misclassification analysis
+- SHAP and feature importances for explainability
+- Executive summary with actionable business takeaways
 
 ## Tools & Technologies
 
