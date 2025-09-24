@@ -58,6 +58,23 @@ All analysis can be found online at [project site](https://johbry17.github.io/Sa
     - `models.ipynb` for model development and evaluation
     - `executive_summary.ipynb` for a project overview and key findings
 
+#### To export notebooks and update the web version:
+
+1. Convert notebooks to HTML (from the appropriate directory):  
+
+```jupyter nbconvert --to html --no-input executive_summary.ipynb --output index.html```  
+
+```jupyter nbconvert --to html --no-input eda.ipynb```  
+
+```jupyter nbconvert --to html --no-input models.ipynb```  
+
+```jupyter nbconvert --to html initial_work.ipynb --TagRemovePreprocessor.enabled=True --TagRemovePreprocessor.remove_input_tags='{"remove_input"}'```
+
+2. Update HTML metadata (favicon, title, etc.) from the repo root:  
+
+```python inject_HTML_metadata.py```
+
+
 ## Gallery
 
 EDA Insights:
